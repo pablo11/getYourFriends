@@ -12,6 +12,11 @@
 		994D04B01D660C4C006150E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994D04AE1D660C4C006150E9 /* Main.storyboard */; };
 		994D04B21D660C4C006150E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 994D04B11D660C4C006150E9 /* Assets.xcassets */; };
 		994D04B51D660C4C006150E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994D04B31D660C4C006150E9 /* LaunchScreen.storyboard */; };
+		994D04C01D660CAF006150E9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994D04BD1D660CAF006150E9 /* Bolts.framework */; };
+		994D04C11D660CAF006150E9 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994D04BE1D660CAF006150E9 /* FBSDKCoreKit.framework */; };
+		994D04C21D660CAF006150E9 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994D04BF1D660CAF006150E9 /* FBSDKLoginKit.framework */; };
+		994D04C41D661CFD006150E9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D04C31D661CFD006150E9 /* Profile.swift */; };
+		99573C301D670230006CE6E0 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99573C2F1D670230006CE6E0 /* FriendCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		994D04B11D660C4C006150E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		994D04B41D660C4C006150E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		994D04B61D660C4C006150E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		994D04BD1D660CAF006150E9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		994D04BE1D660CAF006150E9 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		994D04BF1D660CAF006150E9 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		994D04C31D661CFD006150E9 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		99573C2F1D670230006CE6E0 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				994D04C01D660CAF006150E9 /* Bolts.framework in Frameworks */,
+				994D04C11D660CAF006150E9 /* FBSDKCoreKit.framework in Frameworks */,
+				994D04C21D660CAF006150E9 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,14 +67,51 @@
 		994D04A91D660C4C006150E9 /* getYourFriends */ = {
 			isa = PBXGroup;
 			children = (
+				994D04C71D661EC8006150E9 /* Model */,
+				994D04C61D661EC2006150E9 /* View */,
+				994D04C51D661EB8006150E9 /* Controller */,
+				994D04BC1D660C9A006150E9 /* Frameworks */,
 				994D04AA1D660C4C006150E9 /* AppDelegate.swift */,
-				994D04AC1D660C4C006150E9 /* ViewController.swift */,
-				994D04AE1D660C4C006150E9 /* Main.storyboard */,
 				994D04B11D660C4C006150E9 /* Assets.xcassets */,
-				994D04B31D660C4C006150E9 /* LaunchScreen.storyboard */,
 				994D04B61D660C4C006150E9 /* Info.plist */,
 			);
 			path = getYourFriends;
+			sourceTree = "<group>";
+		};
+		994D04BC1D660C9A006150E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				994D04BD1D660CAF006150E9 /* Bolts.framework */,
+				994D04BE1D660CAF006150E9 /* FBSDKCoreKit.framework */,
+				994D04BF1D660CAF006150E9 /* FBSDKLoginKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		994D04C51D661EB8006150E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				994D04AC1D660C4C006150E9 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		994D04C61D661EC2006150E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				994D04B31D660C4C006150E9 /* LaunchScreen.storyboard */,
+				994D04AE1D660C4C006150E9 /* Main.storyboard */,
+				99573C2F1D670230006CE6E0 /* FriendCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		994D04C71D661EC8006150E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				994D04C31D661CFD006150E9 /* Profile.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +186,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				994D04AD1D660C4C006150E9 /* ViewController.swift in Sources */,
+				994D04C41D661CFD006150E9 /* Profile.swift in Sources */,
 				994D04AB1D660C4C006150E9 /* AppDelegate.swift in Sources */,
+				99573C301D670230006CE6E0 /* FriendCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +303,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/getYourFriends",
+				);
 				INFOPLIST_FILE = getYourFriends/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pablopfister.getYourFriends;
@@ -262,6 +318,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/getYourFriends",
+				);
 				INFOPLIST_FILE = getYourFriends/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pablopfister.getYourFriends;
@@ -288,6 +348,7 @@
 				994D04BB1D660C4C006150E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
